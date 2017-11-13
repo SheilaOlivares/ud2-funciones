@@ -29,7 +29,7 @@ public class Main {
 
             double temperatura = 0;
 
-            if (opcion !=3) {
+            if (opcion == 1 || opcion == 2) {
                 System.out.println("Escribe una temperatura en ºC: ");
                 temperatura = Double.parseDouble(br.readLine());
             }
@@ -41,7 +41,13 @@ public class Main {
                 case 2:
                     System.out.println("La conversion es: " + convertirTemperatura(temperatura, 'K'));
                     break;
-                       }
+                case 3:
+                    System.out.println("Hasta pronto...");
+                    break;
+                default:
+                    System.out.println("Opción erronea...");
+                    break;
+            }
 
         } while (opcion != 3);
     }
